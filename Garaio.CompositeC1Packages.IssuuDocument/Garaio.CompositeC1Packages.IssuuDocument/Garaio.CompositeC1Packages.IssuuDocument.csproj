@@ -178,7 +178,7 @@ xcopy "$(TargetDir)Garaio.CompositeC1Packages.*.dll" "$(ProjectDir)Package\Bin\"
 
 del "$(ProjectDir)\Package\$(TargetName).zip"
 
-"$(ProjectDir)..\References\7za.exe" a "$(ProjectDir)\Package\$(TargetName).zip" -tzip -r "$(ProjectDir)\Package\*"</PostBuildEvent>
+"$(ProjectDir)\ZIP\7za.exe" a "$(ProjectDir)\Package\$(TargetName).zip" -tzip -r "$(ProjectDir)\Package\*"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
