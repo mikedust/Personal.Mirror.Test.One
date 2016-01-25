@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ElementStructure xmlns="http://www.composite.net/ns/management/trees/treemarkup/1.0" xmlns:f="http://www.composite.net/ns/function/1.0">
+  <ElementStructure.AutoAttachments>
+    <NamedParent Name="System" Position="Bottom" />
+  </ElementStructure.AutoAttachments>
+  <ElementRoot>
+    <Children>
+      <Element Label="IssuuDocument Konfiguration" Id="IssuuDocument" Icon="sql-based-connection-edit">
+        <Actions>
+          <CustomUrlAction
+						Url="~/Composite/InstalledPackages/IssuuDocument/IssuuDocumentConfig.aspx"
+						Label="Issuu Konfiguration Manager starten"
+						ToolTip="Manager zum konfigurieren des Issuu-Kontos."
+						Icon="sql-based-connection-edit">
+          </CustomUrlAction>
+        </Actions>
+      </Element>
+    </Children>
+  </ElementRoot>
+</ElementStructure>

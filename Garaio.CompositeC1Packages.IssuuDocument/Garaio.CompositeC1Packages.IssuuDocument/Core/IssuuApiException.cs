@@ -1,0 +1,78 @@
+﻿using System;
+using System.Globalization;
+using System.Runtime.Serialization;
+using System.Xml.Linq;
+
+namespace Garaio.CompositeC1Packages.IssuuDocument.Core
+{
+	[Serializable]
+	public sealed class IssuuApiException : Exception
+	{
+		private const string ErrorMessageFormat = "Es ist ein Issuu API Fehler aufgetreten: {0} (Fehlercode: {1}).";
+		private const string UnknownCodeAttributeValue = "unbekannt";
+		private const string UnknownMessageAttributeValue = "Unbekannter Fehler";
+		private const string CodeAttributeName = "code";
+		private const string MessageAttributeName = "message";
+		private readonly XElement _errorElement;
+
+		public IssuuApiException()
+		{}
+
+		public IssuuApiException(string message) : base(message)
+		{}
+
+		public IssuuApiException(string message, Exception innerException) : base(message, innerException)
+		{}
+
+		private IssuuApiException(SerializationInfo info, StreamingContext context) : base(info, context)
+		{}
+
+		public IssuuApiException(XElement errorElement)
+			: base(string.Format(CultureInfo.CurrentCulture, ErrorMessageFormat, GetErrorMessageFromElement(errorElement), GetErrorCodeFromElement(errorElement)))
+		{
+			_errorElement = errorElement;
+		}
+
+		public override void GetObjectData(SerializationInfo info, StreamingContext context)
+		{
+			if (info == null)
+			{
+				throw new ArgumentNullException("info");
+			}
+
+			base.GetObjectData(info, context);
+		}
+
+		public string ErrorCode
+		{
+			get { return GetErrorCodeFromElement(_errorElement); }
+		}
+
+		public string ErrorMessage
+		{
+			get { return GetErrorMessageFromElement(_errorElement); }
+		}
+
+		private static string GetErrorCodeFromElement(XElement errorElement)
+		{
+			XAttribute codeAttribute = errorElement.Attribute(CodeAttributeName);
+			if (codeAttribute != null && !string.IsNullOrEmpty(codeAttribute.Value))
+			{
+				return codeAttribute.Value;
+			}
+
+			return UnknownCodeAttributeValue;
+		}
+
+		private static string GetErrorMessageFromElement(XElement errorElement)
+		{
+			XAttribute messageAttribute = errorElement.Attribute(MessageAttributeName);
+			if (messageAttribute != null && !string.IsNullOrEmpty(messageAttribute.Value))
+			{
+				return messageAttribute.Value;
+			}
+
+			return UnknownMessageAttributeValue;
+		}
+	}
+}

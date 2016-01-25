@@ -1,0 +1,49 @@
+﻿@using Composite.Functions
+@using Garaio.CompositeC1Packages.IssuuDocument.Core
+@inherits Composite.AspNet.Razor.RazorFunction
+
+@functions {
+
+	private static IssuuController _ic;
+
+	private const int DefaultHeight = 340;
+	private const int DefaultWidth = 525;
+
+	public class IssuuDocumentsWidgetFactory
+	{
+		public static Dictionary<string, string> GetAvailableDocuments()
+		{
+			_ic = new IssuuController { Height = DefaultHeight, Width = DefaultWidth };
+			return _ic.ListDocuments();
+		}
+	}
+
+	public override string FunctionDescription
+	{
+		get { return "Integrieren eines Dokuments auf dem Issuu.com "; }
+	}
+
+	[FunctionParameter(Label = "Dokument", Help = "Die verfügbaren Dokumente vom Issuu-Servis", WidgetFactoryMethod = "DocumentsValueProvider")]
+	public string SelectedDataConfigId { get; set; }
+
+	[FunctionParameter(Label = "Breite", DefaultValue = DefaultWidth, Help = "Die Breite des Issu-Elements")]
+	public int Width { get; set; }
+
+	[FunctionParameter(Label = "Höhe", DefaultValue = DefaultHeight, Help = "Die Höhe des Issu-Elements")]
+	public int Height { get; set; }
+
+	public static IWidgetFunction DocumentsValueProvider()
+	{
+		return StandardWidgetFunctions.DropDownList(typeof(IssuuDocumentsWidgetFactory), "GetAvailableDocuments", "Key", "Value", false, true).WidgetFunction;
+	}
+
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+</head>
+<body>
+	<div data-configid="@SelectedDataConfigId" style="width:@(Width)px; height:@(Height)px;" class="issuuembed"></div>
+</body>
+</html>

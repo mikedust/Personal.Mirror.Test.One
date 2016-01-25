@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
+  <mi:PackageRequirements minimumCompositeVersion="4.0" maximumCompositeVersion="9.9999.9999.9999" />
+
+  <mi:PackageInformation name="Garaio.CompositeC1Packages.IssuuDocument"
+		groupName="Garaio"
+		version="1.0.1" author="GARAIO AG" website="http://www.garaio.com"
+		readMoreUrl="https://github.com/garaio/Garaio.CompositeC1Packages.IssuuDocument"
+		id="{1CA71659-9745-40C8-A097-8E94AA4BD46D}"
+		canBeUninstalled="true"
+		systemLocking="hard"
+		flushOnCompletion="true"
+		reloadConsoleOnCompletion="true">
+    <Description>Provides the ability to configure Issuu Document Service for the usage within your webpage.</Description>
+    <TechnicalDetails>Local management of Issuu Document Settings. Ability to embed Issuu documents into youtr website.</TechnicalDetails>
+  </mi:PackageInformation>
+
+  <mi:PackageFragmentInstallers>
+    <mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller, Composite">
+      <Files>
+        <File sourceFilename="~\App_data\Composite\TreeDefinitions\IssuuDocumentTreeDefinition.xml" targetFilename="~\App_Data\Composite\TreeDefinitions\IssuuDocumentTreeDefinitions.xml" allowOverwrite="true" />
+        <File sourceFilename="~\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx" targetFilename="~\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx" allowOverwrite="true" />
+        <File sourceFilename="~\Bin\Garaio.CompositeC1Packages.IssuuDocument.dll" targetFilename="~\Bin\Garaio.CompositeC1Packages.IssuuDocument.dll" allowOverwrite="true" />
+        <File sourceFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" targetFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" allowOverwrite="true" />
+				<File sourceFilename="~\App_data\Razor\Garaio\IssuuDocument\IssuuDocument.cshtml" targetFilename="~\App_data\Razor\Garaio\IssuuDocument\IssuuDocument.cshtml" allowOverwrite="true" />
+			</Files>
+    </mi:Add>
+  </mi:PackageFragmentInstallers>
+</mi:PackageInstaller>

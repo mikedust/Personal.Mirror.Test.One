@@ -1,0 +1,13 @@
+﻿<xsd:schema id="IssuuDocumentKonfiguration" version="1.0" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="IssuuDocumentConfiguration" type="IssuuDocumentConfiguration">
+	</xsd:element>
+	<xsd:complexType name="IssuuDocumentConfiguration">
+		<xsd:all>
+			<xsd:element minOccurs="1" maxOccurs="1" name="Name" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="1" maxOccurs="1" name="APIKey" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="1" maxOccurs="1" name="APISecretKey" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="1" maxOccurs="1" name="APIUrl" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="1" maxOccurs="1" name="RequestsProSecond" type="xsd:integer"></xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>
