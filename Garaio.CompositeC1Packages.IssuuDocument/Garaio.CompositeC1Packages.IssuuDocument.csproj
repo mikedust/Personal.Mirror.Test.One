@@ -171,7 +171,26 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Package\install.xml" />
-    <Content Include="ZIP\7za.exe" />
+    <Content Include="References\7za.exe" />
+    <Content Include="References\Composite.dll" />
+    <Content Include="References\Composite.Generated.dll" />
+    <Content Include="References\Composite.Workflows.dll" />
+    <Content Include="References\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="References\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="References\Microsoft.CodeAnalysis.dll" />
+    <Content Include="References\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="References\Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+    <Content Include="References\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="References\System.Collections.Immutable.dll" />
+    <Content Include="References\System.Reflection.Metadata.dll" />
+    <Content Include="References\System.Web.Helpers.dll" />
+    <Content Include="References\System.Web.Razor.dll" />
+    <Content Include="References\System.Web.WebPages.Deployment.dll" />
+    <Content Include="References\System.Web.WebPages.dll" />
+    <Content Include="References\System.Web.WebPages.Razor.dll" />
+    <Content Include="References\TidyNet.dll" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -181,7 +200,7 @@ xcopy "$(TargetDir)Garaio.CompositeC1Packages.*.dll" "$(ProjectDir)Package\Bin\"
 
 del "$(ProjectDir)\Package\$(TargetName).zip"
 
-"$(ProjectDir)\ZIP\7za.exe" a "$(ProjectDir)\Package\$(TargetName).zip" -tzip -r "$(ProjectDir)\Package\*"</PostBuildEvent>
+"$(ProjectDir)\References\7za.exe" a "$(ProjectDir)\Package\$(TargetName).zip" -tzip -r "$(ProjectDir)\Package\*"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
