@@ -170,6 +170,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Package\install.xml" />
+    <Content Include="ZIP\7za.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
