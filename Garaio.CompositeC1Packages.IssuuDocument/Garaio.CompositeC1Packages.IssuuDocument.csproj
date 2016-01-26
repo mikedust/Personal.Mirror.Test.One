@@ -158,10 +158,30 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Package\App_data\Razor\Garaio\IssuuDocument\IssuuDocument.cshtml" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Content Include="bin\Debug\Composite.dll" />
+    <Content Include="bin\Debug\Composite.Generated.dll" />
+    <Content Include="bin\Debug\Composite.Workflows.dll" />
+    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Debug\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\Debug\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="bin\Debug\System.Collections.Immutable.dll" />
+    <Content Include="bin\Debug\System.Reflection.Metadata.dll" />
+    <Content Include="bin\Debug\System.Web.Helpers.dll" />
+    <Content Include="bin\Debug\System.Web.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\Debug\TidyNet.dll" />
     <Content Include="Package\App_data\Composite\TreeDefinitions\IssuuDocumentTreeDefinition.xml" />
     <Content Include="Package\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx">
       <SubType>ASPXCodeBehind</SubType>
