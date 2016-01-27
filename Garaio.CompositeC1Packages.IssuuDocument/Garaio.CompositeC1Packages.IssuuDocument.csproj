@@ -161,6 +161,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Package\Styles\Issuu.less" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Package\App_data\Composite\TreeDefinitions\IssuuDocumentTreeDefinition.xml" />
@@ -170,7 +171,9 @@
     <Content Include="Package\Composite\InstalledPackages\IssuuDocument\TextBox.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Content Include="Package\install.xml" />
+    <Content Include="Package\install.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="References\7za.exe" />
     <Content Include="References\Composite.dll" />
     <Content Include="References\Composite.Generated.dll" />

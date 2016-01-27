@@ -23,6 +23,7 @@
         <File sourceFilename="~\Bin\Garaio.CompositeC1Packages.IssuuDocument.dll" targetFilename="~\Bin\Garaio.CompositeC1Packages.IssuuDocument.dll" allowOverwrite="true" />
         <File sourceFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" targetFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" allowOverwrite="true" />
 				<File sourceFilename="~\App_data\Razor\Garaio\IssuuDocument\IssuuDocument.cshtml" targetFilename="~\App_data\Razor\Garaio\IssuuDocument\IssuuDocument.cshtml" allowOverwrite="true" />
+				<File sourceFilename="~\Styles\Issuu.less" targetFilename="~\Styles\Issuu.less" allowOverwrite="true" />
 			</Files>
     </mi:Add>
   </mi:PackageFragmentInstallers>
