@@ -61,6 +61,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to API Exception: Dictionary with DocumentCommon has to be provided..
+        /// </summary>
+        internal static string IssuDocument_Core_Exception_MissingArgument_DocumentCommon_Message {
+            get {
+                return ResourceManager.GetString("IssuDocument_Core_Exception_MissingArgument_DocumentCommon_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to API Exception: Dictionary with Parameters has to be provided..
+        /// </summary>
+        internal static string IssuDocument_Core_Exception_MissingArgument_Parameters_Message {
+            get {
+                return ResourceManager.GetString("IssuDocument_Core_Exception_MissingArgument_Parameters_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to API Exception: An Issuu API Exception was caught: {0} (Exceptioncode: {1})..
+        /// </summary>
+        internal static string IssuDocument_Core_IssuuApiException_MessageFormat_Message {
+            get {
+                return ResourceManager.GetString("IssuDocument_Core_IssuuApiException_MessageFormat_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to API Exception: Unknown Exception..
+        /// </summary>
+        internal static string IssuDocument_Core_IssuuApiException_UnknownException_Message {
+            get {
+                return ResourceManager.GetString("IssuDocument_Core_IssuuApiException_UnknownException_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to API-Key.
         /// </summary>
         internal static string IssuuDocument_Configuration_APIKey_Label {

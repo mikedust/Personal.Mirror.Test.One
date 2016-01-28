@@ -9,7 +9,8 @@ using System.Xml.Linq;
 
 using Garaio.CompositeC1Packages.IssuuDocument.Configuration;
 using Garaio.CompositeC1Packages.IssuuDocument.DTO;
-using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources;
+
+using Resources;
 
 namespace Garaio.CompositeC1Packages.IssuuDocument.Core
 {
@@ -53,7 +54,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Core
 		{
 			if (docDict == null)
 			{
-				throw new ArgumentException(Resources_Text.IssuDocument_Core_Exception_MissingArgument_DocumentCommon_Message, "docDict");
+				throw new ArgumentException(TextResources.IssuDocument_Core_Exception_MissingArgument_DocumentCommon_Message, "docDict");
 			}
 
 			Dictionary<string, DocumentEmbed> resultDict = new Dictionary<string, DocumentEmbed>();

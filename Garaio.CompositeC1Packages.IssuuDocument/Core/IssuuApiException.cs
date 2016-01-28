@@ -2,7 +2,8 @@
 using System.Globalization;
 using System.Runtime.Serialization;
 using System.Xml.Linq;
-using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources;
+
+using Resources;
 
 namespace Garaio.CompositeC1Packages.IssuuDocument.Core
 {
@@ -27,7 +28,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Core
 		{}
 
 		public IssuuApiException(XElement errorElement)
-			: base(string.Format(CultureInfo.CurrentCulture, Resources_Text.IssuDocument_Core_IssuuApiException_MessageFormat_Message, GetErrorMessageFromElement(errorElement), GetErrorCodeFromElement(errorElement)))
+			: base(string.Format(CultureInfo.CurrentCulture, TextResources.IssuDocument_Core_IssuuApiException_MessageFormat_Message, GetErrorMessageFromElement(errorElement), GetErrorCodeFromElement(errorElement)))
 		{
 			_errorElement = errorElement;
 		}
@@ -71,7 +72,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Core
 				return messageAttribute.Value;
 			}
 
-			return Resources_Text.IssuDocument_Core_IssuuApiException_UnknownException_Message;
+			return TextResources.IssuDocument_Core_IssuuApiException_UnknownException_Message;
 		}
 	}
 }

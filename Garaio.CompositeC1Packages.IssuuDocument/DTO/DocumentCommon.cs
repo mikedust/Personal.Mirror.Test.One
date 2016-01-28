@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
-using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources;
+
+using Resources;
 
 namespace Garaio.CompositeC1Packages.IssuuDocument.DTO
 {
@@ -13,7 +14,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.DTO
 		{
 			if (documentCommon == null)
 			{
-				throw new ArgumentException(Resources_Text.IssuDocument_Core_Exception_MissingArgument_DocumentCommon_Message, "documentCommon");
+				throw new ArgumentException(TextResources.IssuDocument_Core_Exception_MissingArgument_DocumentCommon_Message, "documentCommon");
 			}
 
 			this.DocumentId = documentCommon.DocumentId;
