@@ -2,6 +2,7 @@
 using System.Web.UI;
 
 using Garaio.CompositeC1Packages.IssuuDocument.Configuration;
+using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources;
 
 namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPackages.IssuuDocument
 {
@@ -16,32 +17,34 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPa
 		/// <param name="e">Die Event-Argumente.</param>
 		protected override void OnLoad(EventArgs e)
 		{
-			if (!this.IsPostBack)
+			SaveButton.Text = Resources_Text.IssuuDocument_Configuration_SaveButton_Label;
+
+			if (!IsPostBack)
 			{
-				this.BindUi();
+				BindUi();
 			}
 
 			base.OnLoad(e);
 
-			this.DataBind();
+			DataBind();
 		}
 
 		protected void BindUi()
 		{
-			this.ApiKey.Text = IssuuDocumentConfigurationFacade.Configuration.APIKey;
-			this.ApiSecretKey.Text = IssuuDocumentConfigurationFacade.Configuration.APISecretKey;
-			this.ApiUrl.Text = IssuuDocumentConfigurationFacade.Configuration.APIUrl;
-			this.RequestsPerSec.Text = IssuuDocumentConfigurationFacade.Configuration.RequestsProSecond;
+			ApiKey.Text = IssuuDocumentConfigurationFacade.Configuration.APIKey;
+			ApiSecretKey.Text = IssuuDocumentConfigurationFacade.Configuration.APISecretKey;
+			ApiUrl.Text = IssuuDocumentConfigurationFacade.Configuration.APIUrl;
+			RequestsPerSec.Text = IssuuDocumentConfigurationFacade.Configuration.RequestsProSecond;
 		}
 
 		protected void SaveSettings(object sender, EventArgs e)
 		{
-			if (this.Page.IsValid)
+			if (Page.IsValid)
 			{
-				IssuuDocumentConfigurationFacade.Configuration.APIKey = this.ApiKey.Text;
-				IssuuDocumentConfigurationFacade.Configuration.APISecretKey = this.ApiSecretKey.Text;
-				IssuuDocumentConfigurationFacade.Configuration.APIUrl = this.ApiUrl.Text.EndsWith(@"/", StringComparison.Ordinal) ? this.ApiUrl.Text.Remove(this.ApiUrl.Text.Length - 1) : this.ApiUrl.Text;
-				IssuuDocumentConfigurationFacade.Configuration.RequestsProSecond = this.RequestsPerSec.Text;
+				IssuuDocumentConfigurationFacade.Configuration.APIKey = ApiKey.Text;
+				IssuuDocumentConfigurationFacade.Configuration.APISecretKey = ApiSecretKey.Text;
+				IssuuDocumentConfigurationFacade.Configuration.APIUrl = ApiUrl.Text.EndsWith(@"/", StringComparison.Ordinal) ? ApiUrl.Text.Remove(ApiUrl.Text.Length - 1) : ApiUrl.Text;
+				IssuuDocumentConfigurationFacade.Configuration.RequestsProSecond = RequestsPerSec.Text;
 
 				IssuuDocumentConfigurationFacade.SaveCurrentConfiguration();
 			}

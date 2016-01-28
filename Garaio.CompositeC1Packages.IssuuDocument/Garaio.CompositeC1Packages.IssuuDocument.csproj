@@ -146,6 +146,32 @@
     <Compile Include="DTO\DocumentEmbed.cs" />
     <Compile Include="Core\IssuuController.cs" />
     <Compile Include="Core\IssuuHelper.cs" />
+    <Compile Include="Package\App_GlobalResources\Resources.Text.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.Text.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\Composite\Controls\HttpHeadersControl.ascx.cs">
+      <DependentUpon>HttpHeadersControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\Composite\Controls\HttpHeadersControl.ascx.designer.cs">
+      <DependentUpon>HttpHeadersControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Package\Composite\Controls\ScriptLoaderControl.ascx.cs">
+      <DependentUpon>ScriptLoaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\Composite\Controls\ScriptLoaderControl.ascx.designer.cs">
+      <DependentUpon>ScriptLoaderControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Package\Composite\Controls\StyleLoaderControl.ascx.cs">
+      <DependentUpon>StyleLoaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\Composite\Controls\StyleLoaderControl.ascx.designer.cs">
+      <DependentUpon>StyleLoaderControl.ascx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Package\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx.cs">
       <DependentUpon>IssuuDocumentConfig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +191,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Package\App_data\Composite\TreeDefinitions\IssuuDocumentTreeDefinition.xml" />
+    <Content Include="Package\Composite\Controls\HttpHeadersControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Package\Composite\Controls\ScriptLoaderControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Package\Composite\Controls\StyleLoaderControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="Package\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -195,14 +230,18 @@
     <Content Include="References\System.Web.WebPages.Razor.dll" />
     <Content Include="References\TidyNet.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Package\App_GlobalResources\Resources.Text.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Text.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>del "$(ProjectDir)\Package\Bin\*.dll"
 xcopy "$(TargetDir)Garaio.CompositeC1Packages.*.dll" "$(ProjectDir)Package\Bin\" /E /I /Y
-
 del "$(ProjectDir)\Package\$(TargetName).zip"
-
 "$(ProjectDir)\References\7za.exe" a "$(ProjectDir)\Package\$(TargetName).zip" -tzip -r "$(ProjectDir)\Package\*"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,11 +1,12 @@
 ﻿@using Composite.Functions
 @using Garaio.CompositeC1Packages.IssuuDocument.Core
+@using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources
+
 @inherits Composite.AspNet.Razor.RazorFunction
 
 @functions {
 
 	private static IssuuController _ic;
-
 	private const int DefaultHeight = 340;
 	private const int DefaultWidth = 525;
 
@@ -13,6 +14,7 @@
 	{
 		public static Dictionary<string, string> GetAvailableDocuments()
 		{
+			
 			_ic = new IssuuController { Height = DefaultHeight, Width = DefaultWidth };
 			return _ic.ListDocuments();
 		}
@@ -20,16 +22,16 @@
 
 	public override string FunctionDescription
 	{
-		get { return "Integrieren eines Dokuments auf dem Issuu.com "; }
+		get { return Resources_Text.IssuuDocument_FunctionDescription; }
 	}
 
-	[FunctionParameter(Label = "Dokument", Help = "Die verfügbaren Dokumente vom Issuu-Servis", WidgetFactoryMethod = "DocumentsValueProvider")]
+	[FunctionParameter(Label = "Document", Help = "The Document to display. List contains available Documents received from the Issuu-Service", WidgetFactoryMethod = "DocumentsValueProvider")]
 	public string SelectedDataConfigId { get; set; }
 
-	[FunctionParameter(Label = "Breite", DefaultValue = DefaultWidth, Help = "Die Breite des Issu-Elements")]
+	[FunctionParameter(Label = "Width", DefaultValue = DefaultWidth, Help = "The width of the Issuu-Element.")]
 	public int Width { get; set; }
 
-	[FunctionParameter(Label = "Höhe", DefaultValue = DefaultHeight, Help = "Die Höhe des Issu-Elements")]
+	[FunctionParameter(Label = "Height", DefaultValue = DefaultHeight, Help = "The height of the Issuu-Element.")]
 	public int Height { get; set; }
 
 	public static IWidgetFunction DocumentsValueProvider()
@@ -42,7 +44,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
-	<link href="~/Styles/Issuu.less" rel="stylesheet" />
+	<link href="../../../../Styles/Issuu.less" rel="stylesheet" />
 </head>
 <body>
 	<div data-configid="@SelectedDataConfigId" style="width:@(Width)px; height:@(Height)px;" class="issuuembed"></div>

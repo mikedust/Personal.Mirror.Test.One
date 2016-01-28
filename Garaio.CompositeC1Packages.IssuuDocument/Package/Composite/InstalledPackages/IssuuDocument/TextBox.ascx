@@ -1,11 +1,9 @@
 ﻿<%@ Control Language="C#" Inherits="Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase" %>
 <%@ Import Namespace="Composite.Data.Validation.ClientValidationRules" %>
-<%@ Import Namespace="System.Xml" %>
-<%@ Import Namespace="System.IO" %>
 
 <%--based on: ~/Composite/controls/FormUiControlTemplates/TextInput/TextBox.ascx --%>
 <script runat="server">
-    private string _currentStringValue = null;
+    private string _currentStringValue;
 
     protected void Page_Init(object sender, EventArgs e)
     {

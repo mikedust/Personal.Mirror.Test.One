@@ -22,13 +22,22 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPa
         protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
+        /// SaveButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Composite.Core.WebClient.UiControlLib.ToolbarButton SaveButton;
+        
+        /// <summary>
         /// ApiKey control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-		protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase ApiKey;
+        protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase ApiKey;
         
         /// <summary>
         /// ApiSecretKey control.
@@ -37,7 +46,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPa
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-		protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase ApiSecretKey;
+        protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase ApiSecretKey;
         
         /// <summary>
         /// ApiUrl control.
@@ -46,7 +55,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPa
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-		protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase ApiUrl;
+        protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase ApiUrl;
         
         /// <summary>
         /// RequestsPerSec control.
@@ -55,6 +64,6 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPa
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-		protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase RequestsPerSec;
+        protected global::Composite.Plugins.Forms.WebChannel.UiControlFactories.TextInputTemplateUserControlBase RequestsPerSec;
     }
 }
