@@ -5,12 +5,12 @@
   </ElementStructure.AutoAttachments>
   <ElementRoot>
     <Children>
-      <Element Label="IssuuDocument Konfiguration" Id="IssuuDocument" Icon="sql-based-connection-edit">
+      <Element Label="${Resource, Resources.TextResources.IssuuDocument_Tree_Label}" Id="IssuuDocument" Icon="sql-based-connection-edit">
         <Actions>
           <CustomUrlAction
 						Url="~/Composite/InstalledPackages/IssuuDocument/IssuuDocumentConfig.aspx"
-						Label="Issuu Konfiguration Manager starten"
-						ToolTip="Manager zum konfigurieren des Issuu-Kontos."
+						Label="${Resource, Resources.TextResources.IssuuDocument_Tree_ActionLabel}"
+						ToolTip="${Resource, Resources.TextResources.IssuuDocument_Tree_ActionToolTip}"
 						Icon="sql-based-connection-edit">
           </CustomUrlAction>
         </Actions>

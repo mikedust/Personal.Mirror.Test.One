@@ -1,6 +1,7 @@
-﻿@using Composite.Functions
+﻿@using System.Collections.Generic
+@using Composite.Functions
 @using Garaio.CompositeC1Packages.IssuuDocument.Core
-@using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources
+@using Resources
 
 @inherits Composite.AspNet.Razor.RazorFunction
 
@@ -10,11 +11,11 @@
 	private const int DefaultHeight = 340;
 	private const int DefaultWidth = 525;
 
-	public class IssuuDocumentsWidgetFactory
+	public static class IssuuDocumentsWidgetFactory
 	{
 		public static Dictionary<string, string> GetAvailableDocuments()
 		{
-			
+
 			_ic = new IssuuController { Height = DefaultHeight, Width = DefaultWidth };
 			return _ic.ListDocuments();
 		}
@@ -22,16 +23,16 @@
 
 	public override string FunctionDescription
 	{
-		get { return Resources_Text.IssuuDocument_FunctionDescription; }
+		get { return TextResources.IssuuDocument_FunctionDescription; }
 	}
 
-	[FunctionParameter(Label = "Document", Help = "The Document to display. List contains available Documents received from the Issuu-Service", WidgetFactoryMethod = "DocumentsValueProvider")]
+	[FunctionParameter(Label = "${Resource, Resources.TextResources.IssuuDocument_FunctionParameter_SelectedDataConfigId}", Help = "${Resource, Resources.TextResources.IssuuDocument_FunctionParameter_SelectedDataConfigIdHelp}", WidgetFactoryMethod = "DocumentsValueProvider")]
 	public string SelectedDataConfigId { get; set; }
 
-	[FunctionParameter(Label = "Width", DefaultValue = DefaultWidth, Help = "The width of the Issuu-Element.")]
+	[FunctionParameter(Label = "${Resource, Resources.TextResources.IssuuDocument_FunctionParameter_Width}", DefaultValue = DefaultWidth, Help = "${Resource, Resources.TextResources.IssuuDocument_FunctionParameter_WidthHelp}")]
 	public int Width { get; set; }
 
-	[FunctionParameter(Label = "Height", DefaultValue = DefaultHeight, Help = "The height of the Issuu-Element.")]
+	[FunctionParameter(Label = "${Resource, Resources.TextResources.IssuuDocument_FunctionParameter_Height}", DefaultValue = DefaultWidth, Help = "${Resource, Resources.TextResources.IssuuDocument_FunctionParameter_HeightHelp}")]
 	public int Height { get; set; }
 
 	public static IWidgetFunction DocumentsValueProvider()
@@ -44,7 +45,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
-	<link href="../../../../Styles/Issuu.less" rel="stylesheet" />
+	<link href="~/Frontend/Garaio/IssuuDocument/Styles.css" rel="stylesheet" />
 </head>
 <body>
 	<div data-configid="@SelectedDataConfigId" style="width:@(Width)px; height:@(Height)px;" class="issuuembed"></div>

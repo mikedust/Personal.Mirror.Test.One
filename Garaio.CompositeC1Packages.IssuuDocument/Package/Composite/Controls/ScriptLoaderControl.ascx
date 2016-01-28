@@ -1,1 +1,0 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ScriptLoaderControl.ascx.cs" Inherits="Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.Controls.ScriptLoaderControl" %>

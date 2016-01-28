@@ -2,7 +2,6 @@
 using System.Web.UI;
 
 using Garaio.CompositeC1Packages.IssuuDocument.Configuration;
-using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources;
 
 namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPackages.IssuuDocument
 {
@@ -17,7 +16,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Package.Composite.InstalledPa
 		/// <param name="e">Die Event-Argumente.</param>
 		protected override void OnLoad(EventArgs e)
 		{
-			SaveButton.Text = Resources_Text.IssuuDocument_Configuration_SaveButton_Label;
+			SaveButton.Text = Resources.TextResources.IssuuDocument_Configuration_SaveButton_Label;
 
 			if (!IsPostBack)
 			{

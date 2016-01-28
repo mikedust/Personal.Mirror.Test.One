@@ -1,0 +1,24 @@
+﻿.issuuembed,
+.issuu-isrendered {
+  position: relative;
+  padding-top: 80%;
+  width: 100%!important;
+  height: auto!important;
+}
+.issuuembed a.read-link img,
+.issuu-isrendered a.read-link img {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.issuuembed > *,
+.issuu-isrendered > * {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

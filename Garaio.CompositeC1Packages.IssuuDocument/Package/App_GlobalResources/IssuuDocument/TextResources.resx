@@ -138,4 +138,31 @@
   <data name="IssuuDocument_FunctionDescription" xml:space="preserve">
     <value>Integrate an Issuu Document from Issuu.com.</value>
   </data>
+  <data name="IssuuDocument_FunctionParameter_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="IssuuDocument_FunctionParameter_HeightHelp" xml:space="preserve">
+    <value>The height of the Issuu-Element.</value>
+  </data>
+  <data name="IssuuDocument_FunctionParameter_SelectedDataConfigId" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="IssuuDocument_FunctionParameter_SelectedDataConfigIdHelp" xml:space="preserve">
+    <value>The Document to display. List contains available Documents received from the Issuu-Service</value>
+  </data>
+  <data name="IssuuDocument_FunctionParameter_Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="IssuuDocument_FunctionParameter_WidthHelp" xml:space="preserve">
+    <value>The width of the Issuu-Element.</value>
+  </data>
+  <data name="IssuuDocument_Tree_ActionLabel" xml:space="preserve">
+    <value>Issuu Konfiguration Manager starten</value>
+  </data>
+  <data name="IssuuDocument_Tree_ActionToolTip" xml:space="preserve">
+    <value>Manager zum konfigurieren des Issuu-Kontos.</value>
+  </data>
+  <data name="IssuuDocument_Tree_Label" xml:space="preserve">
+    <value>IssuuDocument Konfiguration</value>
+  </data>
 </root>

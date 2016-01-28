@@ -19,11 +19,14 @@
     <mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller, Composite">
       <Files>
         <File sourceFilename="~\App_data\Composite\TreeDefinitions\IssuuDocumentTreeDefinition.xml" targetFilename="~\App_Data\Composite\TreeDefinitions\IssuuDocumentTreeDefinitions.xml" allowOverwrite="true" />
-        <File sourceFilename="~\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx" targetFilename="~\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx" allowOverwrite="true" />
         <File sourceFilename="~\Bin\Garaio.CompositeC1Packages.IssuuDocument.dll" targetFilename="~\Bin\Garaio.CompositeC1Packages.IssuuDocument.dll" allowOverwrite="true" />
-        <File sourceFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" targetFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" allowOverwrite="true" />
+				<File sourceFilename="~\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx" targetFilename="~\Composite\InstalledPackages\IssuuDocument\IssuuDocumentConfig.aspx" allowOverwrite="true" />
+				<File sourceFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" targetFilename="~\Composite\InstalledPackages\IssuuDocument\TextBox.ascx" allowOverwrite="true" />
 				<File sourceFilename="~\App_data\Razor\Garaio\IssuuDocument\IssuuDocument.cshtml" targetFilename="~\App_data\Razor\Garaio\IssuuDocument\IssuuDocument.cshtml" allowOverwrite="true" />
-				<File sourceFilename="~\Styles\Issuu.less" targetFilename="~\Styles\Issuu.less" allowOverwrite="true" />
+				<File sourceFilename="~\Frontend\Garaio\IssuuDocument\Styles.css" targetFilename="~\Frontend\Garaio\IssuuDocument\Styles.css" allowOverwrite="true" />
+				<File sourceFilename="~\App_GlobalResources\IssuuDocument\TextResources.resx" targetFilename="~\App_GlobalResources\IssuuDocument\TextResources.resx" allowOverwrite="true" />
+				<File sourceFilename="~\App_GlobalResources\IssuuDocument\TextResources.en.resx" targetFilename="~\App_GlobalResources\IssuuDocument\TextResources.en.resx" allowOverwrite="true" />
+				<File sourceFilename="~\App_GlobalResources\IssuuDocument\TextResources.de.resx" targetFilename="~\App_GlobalResources\IssuuDocument\TextResources.de.resx" allowOverwrite="true" />
 			</Files>
     </mi:Add>
   </mi:PackageFragmentInstallers>
