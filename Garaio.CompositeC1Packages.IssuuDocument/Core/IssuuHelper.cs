@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 using Garaio.CompositeC1Packages.IssuuDocument.Configuration;
+using Garaio.CompositeC1Packages.IssuuDocument.Package.App_GlobalResources;
 
 namespace Garaio.CompositeC1Packages.IssuuDocument.Core
 {
@@ -24,7 +25,7 @@ namespace Garaio.CompositeC1Packages.IssuuDocument.Core
 		{
 			if (parametersDict == null)
 			{
-				throw new ArgumentException("Dictionary with parameters has to be provided.", "parametersDict");
+				throw new ArgumentException(Resources_Text.IssuDocument_Core_Exception_MissingArgument_Parameters_Message, "parametersDict");
 			}
 
 			List<RequestParameters.RequestParamters> parameters = parametersDict.Keys.OrderBy(m => m.ToString()).ToList();

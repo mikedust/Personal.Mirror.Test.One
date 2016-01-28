@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Garaio.CompositeC1Packages.IssuuDocument.DTO
+﻿namespace Garaio.CompositeC1Packages.IssuuDocument.DTO
 {
 	public class DocumentEmbed : DocumentCommon
 	{

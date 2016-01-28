@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="IssuDocument_Core_Exception_MissingArgument_DocumentCommon_Message" xml:space="preserve">
+    <value>Dictionary with DocumentCommon has to be provided.</value>
+  </data>
+  <data name="IssuDocument_Core_Exception_MissingArgument_Parameters_Message" xml:space="preserve">
+    <value>Dictionary with Parameters has to be provided.</value>
+  </data>
+  <data name="IssuDocument_Core_IssuuApiException_MessageFormat_Message" xml:space="preserve">
+    <value>An Issuu API Exception was caught: {0} (Exceptioncode: {1}).</value>
+  </data>
+  <data name="IssuDocument_Core_IssuuApiException_UnknownException_Message" xml:space="preserve">
+    <value>Unknown Exception.</value>
+  </data>
   <data name="IssuuDocument_Configuration_APIKey_Label" xml:space="preserve">
     <value>API-Key</value>
   </data>
@@ -135,7 +147,7 @@
   <data name="IssuuDocument_Configuration_SaveButton_Label" xml:space="preserve">
     <value>Save Settings</value>
   </data>
-  <data name="IssuuDocument_FunctionDescription" xml:space="preserve">
+  <data name="IssuuDocument_FunctionDescription_Text" xml:space="preserve">
     <value>Integrate an Issuu Document from Issuu.com.</value>
   </data>
   <data name="IssuuDocument_FunctionParameter_Height" xml:space="preserve">
