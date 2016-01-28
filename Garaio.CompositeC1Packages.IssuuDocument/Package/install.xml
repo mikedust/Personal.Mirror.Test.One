@@ -12,7 +12,7 @@
 		flushOnCompletion="true"
 		reloadConsoleOnCompletion="true">
     <Description>Provides the ability to configure Issuu Document Service for the usage within your webpage.</Description>
-    <TechnicalDetails>Local management of Issuu Document Settings. Ability to embed Issuu documents into youtr website.</TechnicalDetails>
+    <TechnicalDetails>Local management of Issuu Document Settings. Ability to embed Issuu documents into your website.</TechnicalDetails>
   </mi:PackageInformation>
 
   <mi:PackageFragmentInstallers>
